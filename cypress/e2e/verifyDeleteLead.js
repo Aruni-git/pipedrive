@@ -15,7 +15,6 @@ it('TC 01 verify delete a lead', () => {
     onDealsPage.navigateToLeads()
     onLeadsPage.selectALead()
     onLeadsPage.selectOptions()
-
     
 })
 
