@@ -12,15 +12,14 @@ describe('verify delete a lead', () =>{
 })
 
 it('TC 01 verify delete a lead', () => {
-    onDealsPage.navigateToLeads()
-    onLeadsPage.selectALead()
-    onLeadsPage.selectOptions()
-    onLeadsPage.clickDelete()
+
+        onDealsPage.navigateToLeads()
+        onLeadsPage.selectALead()
+        onLeadsPage.selectOptions()
+        onLeadsPage.clickDelete()
+        onLeadsPage.clickProfile()
+        onLeadsPage.clickLogout()
     
 })
-afterEach('Log out', () =>{
-       
-    onLeadsPage.clickProfile()
-    onLeadsPage.clickLogout()
-})
+
 })
