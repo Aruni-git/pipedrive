@@ -19,10 +19,6 @@ export class LeadsPage {
         cy.get('.ff_v882__EntitySuggestions__addNewText__KgQ').click()
         //Add Value
         cy.get(':nth-child(2) > .ff_v882__InputSelectCompound__compoundComponent__JpK > .ff_v882__InputSelectCompound__inputWrap__BiG > .cui5-input > .cui5-input__box > [data-testid="compound-input"]').type(30000)
-        //Add label
-        cy.get('.ff_v882__MultipleOptions__row__bBr > .cui5-select > .cui5-select__box').click()
-        cy.get('#downshift-1-item-1')
-        cy.contains('Warm').click()
         //Add phone number
         cy.get(':nth-child(1) > .FormField__formField--E60Qw > :nth-child(2) > .Duplicates__popoverWrap--__Zlj > :nth-child(1) > .ff_v882__InputSelectAddMore__wrapper__aVl > section > .ff_v882__InputSelectAddMore__itemWrap__gXU > .ff_v882__InputSelectAddMore__item__qFn > .ff_v882__InputSelectCompound__compoundComponent__JpK > .ff_v882__InputSelectCompound__inputWrap__BiG > .cui5-input > .cui5-input__box > [data-testid="compound-input"]').type('+94711345677')
         //Add email address
@@ -58,7 +54,6 @@ export class LeadsPage {
     clickSaveMandatoryField(){
         cy.get('[data-test="add-modals-save"] > .cui5-button__label').click()
         cy.get('[data-test-type="person"] > :nth-child(2) > :nth-child(1) > [role="combobox"] > :nth-child(1) > :nth-child(1) > .ff_v882__InputSelect__wrapper__alI > .cui5-input > .cui5-input__error-message').should('have.text' ,'A person or organization is required')
-        cy.get('[data-test-type="person"] > :nth-child(2) > :nth-child(1) > [role="combobox"] > :nth-child(1) > :nth-child(1) > .ff_v882__InputSelect__wrapper__alI > .cui5-input > .cui5-input__error-message').should('have.text' ,'A person or organization is required')
         cy.get(':nth-child(2) > .cui5-input > .cui5-input__error-message').should('have.text' ,'Title is required')
     }
 
@@ -74,10 +69,6 @@ export class LeadsPage {
            cy.get('.ff_v882__EntitySuggestions__addNewText__KgQ').click()
             //Add Value
             cy.get(':nth-child(2) > .ff_v882__InputSelectCompound__compoundComponent__JpK > .ff_v882__InputSelectCompound__inputWrap__BiG > .cui5-input > .cui5-input__box > [data-testid="compound-input"]').type(30000)
-            //Add label
-            cy.get('.ff_v882__MultipleOptions__row__bBr > .cui5-select > .cui5-select__box').click()
-            cy.get('#downshift-1-item-2')
-            cy.contains('Cold').click()
 
        
     }
@@ -95,7 +86,7 @@ export class LeadsPage {
         cy.get(':nth-child(2) > .ff_v882__InputSelectCompound__compoundComponent__JpK > .ff_v882__InputSelectCompound__inputWrap__BiG > .cui5-input > .cui5-input__box > [data-testid="compound-input"]').type(20000)
       //Review existing organization
         cy.get('[data-test="duplicate-review"]').click({ force: true })
-       cy.contains('Verdant').click()
+       cy.contains('Verdant').click({ force: true })
        //cy.get('.cui5-option ff_v882__EntitySuggestions__option__gm- ff_v882__EntitySuggestions__optionHighlighted__aU3').click()
        
         //Add phone number
@@ -112,10 +103,7 @@ export class LeadsPage {
         cy.get('#downshift-0-item-0 > [data-testid="option"] > .ff_v882__EntitySuggestions__details__TLu').click()
          //Add Value
          cy.get(':nth-child(2) > .ff_v882__InputSelectCompound__compoundComponent__JpK > .ff_v882__InputSelectCompound__inputWrap__BiG > .cui5-input > .cui5-input__box > [data-testid="compound-input"]').type(30000)
-         //Add label
-         cy.get('.ff_v882__MultipleOptions__row__bBr > .cui5-select > .cui5-select__box').click()
-         cy.get('#downshift-1-item-2')
-         cy.contains('Cold').click()
+    
     }
 
    //Phone number validation
@@ -192,34 +180,31 @@ export class LeadsPage {
 
     selectALeadToConvert(){
         cy.wait(7000)
-        cy.contains('VerdantTechnology lead').click()
+        cy.contains('Verdant lead').click()
     }
+
     selectOptions(){
         cy.wait(3000)
         cy.get('.hEqhrf > .cui5-button--size-s').click()
-        cy.get('.hEqhrf > .cui5-button--size-s').trigger('mouseup')
-      //  cy.get('.Stack-sc-1tpz856-0 hEqhrf > .cui5-popover cui5-popover--placement-top-start').click({ force: true })
-      cy.get('.Stack-sc-1tpz856-0 hEqhrf > .cui5-popover cui5-popover--placement-top-start').should('be.hidden') // element is hidden
-        .invoke('show') // call jquery method 'show' on the '.container'
-        .should('be.visible') 
-      
-       // cy.get('.cui5-popover cui5-popover--placement-top-start').should('be.visible')
-        // cy.get('.cui5-button cui5-button--variant-secondary cui5-button--size-s LeadActionsFooter__ActionsSolidButton-sc-c8b2pi-0 bHXdJM > .cui5-icon cui5-icon--color-primary cui5-icon--size-s')
-        //     .parent()
-        //     .click()
-       // cy.get('button.cui5-button.cui5-button--variant-secondary.cui5-button').click('topRight')
-       // cy.get('.Stack-sc-1tpz856-0 hEqhrf> .cui5-popover.cui5-popover--placement-top-start').click()
-    //    cy.get('.cui5-popover cui5-popover--placement-top-start').should('be.visible')
-     //   cy.get('.cui5-popover cui5-popover--placement-top-start').invoke('show').click()
         
-     cy.focused().then(('.cui5-popover cui5-popover--placement-top-start'), () => {
-       
-        cy.get('.cui5-popover cui5-popover--placement-top-start')//.should('be.hidden') // element is hidden
-        .invoke('show') // call jquery method 'show' on the '.container'
-        .should('be.visible') 
-      })
     }
    
+    //click delete
+    clickDelete(){
+        cy.contains('Delete lead').click({force:true})
+        cy.get('.cui5-dialog--visible > .cui5-dialog__wrap > .cui5-dialog__actions > [data-testid="dialogDeleteButton"] > .cui5-button__label').click()
+    }
+
+    //click profile
+    clickProfile(){
+        cy.get('[data-test="account-menu-button"]').click()
+    }
+
+    //click signout
+    clickLogout(){
+        cy.get('[data-test="submenu-item-logout"] > .sc-dPyBCJ').click()
+    
+}
 
 }
 

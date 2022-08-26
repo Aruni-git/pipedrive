@@ -10,7 +10,13 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+// Cypress.Commands.add('logloingToApplicationin', (email, password) => { 
+//    //Enter email address
+//    cy.get('[data-test="login"]').type('aruni.gunapala@gmail.com')
+
+//    //Enter password
+//    cy.get('[data-test="password"]').type('Wiley@1234')
+ //})
 //
 //
 // -- This is a child command --

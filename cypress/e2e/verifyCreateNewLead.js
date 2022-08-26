@@ -68,5 +68,6 @@ describe("verify create new lead", () => {
     onLeadsPage.clickAddLead();
     onLeadsPage.addLeadsDetailsForCancelCheckButton();
     onLeadsPage.clickCancel();
+    
   });
 });
