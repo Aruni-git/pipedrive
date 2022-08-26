@@ -10,52 +10,52 @@ describe("verify create new lead", () => {
       onLoginPage.userLogin();
   });
 
-  // it("TC 01 verify add a new lead", () => {
+  it("TC 01 verify add a new lead", () => {
 
-  //     onDealsPage.navigateToLeads();
-  //     onLeadsPage.clickAddLead();
-  //     onLeadsPage.addLeadsDetails();
-  //     onLeadsPage.clickSave();
-  // });
+      onDealsPage.navigateToLeads();
+      onLeadsPage.clickAddLead();
+      onLeadsPage.addLeadsDetails();
+      onLeadsPage.clickSave();
+  });
 
-  // it("TC 02 verify add a new lead record for existing contact and exisiting company", () => {
+  it("TC 02 verify add a new lead record for existing contact and exisiting company", () => {
 
-  //     onDealsPage.navigateToLeads();
-  //     onLeadsPage.clickAddLead();
-  //     onLeadsPage.addLeadsDetailsForexistingLead();
-  //     onLeadsPage.clickSave();
-  // });
+      onDealsPage.navigateToLeads();
+      onLeadsPage.clickAddLead();
+      onLeadsPage.addLeadsDetailsForexistingLead();
+      onLeadsPage.clickSave();
+  });
 
-  // it("TC 03 verify add a new lead record for existing contact and new company", () => {
+  it("TC 03 verify add a new lead record for existing contact and new company", () => {
 
-  //     onDealsPage.navigateToLeads();
-  //     onLeadsPage.clickAddLead();
-  //     onLeadsPage.addLeadsDetailsForExistingContact();
-  //     onLeadsPage.clickSave();
-  // });
+      onDealsPage.navigateToLeads();
+      onLeadsPage.clickAddLead();
+      onLeadsPage.addLeadsDetailsForExistingContact();
+      onLeadsPage.clickSave();
+  });
 
-  // it("TC 04 verify add a new lead record for new contact and existing company", () => {
+  it("TC 04 verify add a new lead record for new contact and existing company", () => {
 
-  //     onDealsPage.navigateToLeads();
-  //     onLeadsPage.clickAddLead();
-  //     onLeadsPage.addNewLeadsDetailsForExistingCompany();
-  //     onLeadsPage.clickSave();
-  // });
+      onDealsPage.navigateToLeads();
+      onLeadsPage.clickAddLead();
+      onLeadsPage.addNewLeadsDetailsForExistingCompany();
+      onLeadsPage.clickSave();
+  });
 
-  // it("TC 05 verify mandaory field validations", () => {
+  it("TC 05 verify mandaory field validations", () => {
 
-  //     onDealsPage.navigateToLeads();
-  //     onLeadsPage.clickAddLead();
-  //     onLeadsPage.clickSaveMandatoryField();
-  // });
+      onDealsPage.navigateToLeads();
+      onLeadsPage.clickAddLead();
+      onLeadsPage.clickSaveMandatoryField();
+  });
 
-  // it("TC 06 verify phone number validation", () => {
+  it("TC 06 verify phone number validation", () => {
 
-  //     onDealsPage.navigateToLeads();
-  //     onLeadsPage.clickAddLead();
-  //     onLeadsPage.addLeadsDetailsForPhoneValidation();
-  //     onLeadsPage.validatePhoneNumber();
-  // });
+      onDealsPage.navigateToLeads();
+      onLeadsPage.clickAddLead();
+      onLeadsPage.addLeadsDetailsForPhoneValidation();
+      onLeadsPage.validatePhoneNumber();
+  });
 
   it("TC 07 verify email address validation", () => {
 

@@ -217,7 +217,7 @@ export class LeadsPage {
     //click signout
     clickLogout(){
         cy.get('[data-test="submenu-item-logout"] > .sc-dPyBCJ').click()
-    
+        cy.url().should('eq', 'https://www.pipedrive.com/')
 }
 
 }
