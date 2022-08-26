@@ -9,14 +9,26 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-// Cypress.Commands.add('logloingToApplicationin', (email, password) => { 
-//    //Enter email address
-//    cy.get('[data-test="login"]').type('aruni.gunapala@gmail.com')
+Cypress.Commands.add('navigateToURL', () => { 
 
-//    //Enter password
-//    cy.get('[data-test="password"]').type('Wiley@1234')
- //})
+  cy.visit('/auth/login')
+  cy.url().should('eq', 'https://app.pipedrive.com/auth/login')
+    })
+
+// -- This is a parent command --
+Cypress.Commands.add('loginToApplication', (email, password) => { 
+
+  cy.clearCookies()
+  cy.clearLocalStorage()
+   //Enter email address
+   cy.get('[data-test="login"]').type(email)
+
+   //Enter password
+   cy.get('[data-test="password"]').type(password)
+
+   //Click login button
+   cy.get('[data-test="submit-button"]').click()
+ })
 //
 //
 // -- This is a child command --
